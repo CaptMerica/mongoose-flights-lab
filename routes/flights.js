@@ -3,15 +3,12 @@ import * as flightsCtrl from "../controllers/flights.js"
 
 const router = Router()
 
-router.post('/', flightsCtrl.create)
-
+// GET locahost:3000/flights
 router.get('/', flightsCtrl.index)
-router.get('/new', flightsCtrl.new)
-router.get('/:id', flightsCtrl.show)
-router.get('/:id/edit', flightsCtrl.edit)
+// POST localhost:3000/flights
+router.post("/", flightsCtrl.create)
 
-router.put(':/id', flightsCtrl.update)
-router.delete('/:id', flightsCtrl.delete)
+
 
 
 export {
