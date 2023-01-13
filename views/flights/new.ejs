@@ -1,0 +1,19 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/flights/index.css" />
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Flight List</h1>
+  <% if (flights) { %>
+    <h2>Add a flight!</h2>
+    <form action="/flights" method="POST">
+      <label>
+        New Flight: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <button type="submit">Add flight</button>
+    </form>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>
